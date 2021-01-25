@@ -1,5 +1,5 @@
 import React from "react"
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
+import { BrowserRouter as Router, HashRouter, Route, Switch } from "react-router-dom"
 import Navbar from "./components/layout/Navbar"
 import Index from "./components/layout/Index"
 import Lyrics from "./components/tracks/Lyrics"
@@ -10,7 +10,7 @@ import { Provider } from "./context"
 function App() {
   return (
     <Provider>
-      <Router basename={`${process.env.PUBLIC_URL}/`}>
+      <HashRouter basename="/">
         <>
           <Navbar />
           <div className="container">
@@ -20,7 +20,7 @@ function App() {
             </Switch>
           </div>
         </>
-      </Router>
+      </HashRouter>
     </Provider>
   )
 }
