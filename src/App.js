@@ -10,7 +10,7 @@ import { Provider } from "./context"
 function App() {
   return (
     <Provider>
-      <Router>
+      <Router basename={`${process.env.PUBLIC_URL}/`}>
         <>
           <Navbar />
           <div className="container">
